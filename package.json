@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "this is sample web site to learn npm ",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "watch:bundleWatcher": "watch 'npm run build:bundle' client",
     "watch:browser": "live-reload --port 9091 public/",
     "watch": "npm run watch:test & npm run watch:bundle & npm run watch:server & npm run watch:browser",
-    "push:origin":"git push --tags origin HEAD:master"
+    "push:origin": "git push --tags origin HEAD:master"
   },
   "jshintConfig": {
     "esnext": "true",
