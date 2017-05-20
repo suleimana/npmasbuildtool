@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is sample web site to learn npm ",
   "main": "index.js",
   "scripts": {
@@ -29,8 +29,8 @@
     "watch:ts": "tsc -w --noImplicitUseStrict --outDir ./lib --module commonjs ./src/typescripts/tsCode.ts",
     "watch:bundle": "watchify ./client/js/app.js -o ./public/js/bundle.js -dv",
     "watch:bundleWatcher": "watch 'npm run build:bundle' client",
-    "watch:browser":"live-reload --port 9091 public/",
-    "watch":"npm run watch:test & npm run watch:bundle & npm run watch:server & npm run watch:browser"
+    "watch:browser": "live-reload --port 9091 public/",
+    "watch": "npm run watch:test & npm run watch:bundle & npm run watch:server & npm run watch:browser"
   },
   "jshintConfig": {
     "esnext": "true",
@@ -63,6 +63,6 @@
   },
   "repository": {
     "type": "git",
-    "url":"."
+    "url": "."
   }
 }
