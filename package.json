@@ -1,0 +1,68 @@
+{
+  "name": "stupidlittlewebsite",
+  "version": "1.0.0",
+  "description": "this is sample web site to learn npm ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test -U bdd -R spec",
+    "pretest": "npm run compile && npm run lint",
+    "posttest": "echo \"after test scrip \"",
+    "start": "node index.js",
+    "stop": "echo \" Running stop scrit\"",
+    "restart": "echo \" Running restart scrit\"",
+    "start:dev": "node index.js 4000",
+    "lint": "jshint --exclude ./lib/*.js,./node_modules/** *.js **/*.js",
+    "compile:coffee": "coffee --compile --output ./lib ./src/coffeescripts",
+    "compile:ts": "tsc --noImplicitUseStrict --outDir ./lib --module commonjs ./src/typescripts/tsCode.ts",
+    "compile": "npm run compile:coffee && npm run compile:ts",
+    "precompile": "npm run clean",
+    "clean": "rimraf ./lib/*",
+    "build:less": "lessc client/less/demo.less public/css/site.css",
+    "build:bundle": "browserify ./client/js/app.js | uglifyjs -mc > ./public/js/bundle.js",
+    "build:clean": "rimraf ./public/js/* ./public/css/*",
+    "prebuild": "npm run build:clean",
+    "build": "npm run build:less &&  npm run build:bundle",
+    "watch:test": "npm test -- --watch -R min",
+    "watch:lint": "watch 'npm run lint' .",
+    "watch:server": "nodemon --ignore client --ignore public index.js",
+    "watch:coffee": "coffee --compile -w --output ./lib ./src/coffeescripts",
+    "watch:ts": "tsc -w --noImplicitUseStrict --outDir ./lib --module commonjs ./src/typescripts/tsCode.ts",
+    "watch:bundle": "watchify ./client/js/app.js -o ./public/js/bundle.js -dv",
+    "watch:bundleWatcher": "watch 'npm run build:bundle' client",
+    "watch:browser":"live-reload --port 9091 public/",
+    "watch":"npm run watch:test & npm run watch:bundle & npm run watch:server & npm run watch:browser"
+  },
+  "jshintConfig": {
+    "esnext": "true",
+    "noyield": "true"
+  },
+  "keywords": [
+    "npm",
+    "scripting"
+  ],
+  "author": "Suleiman Alrosan",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "coffee-script": "^1.12.6",
+    "jshint": "^2.9.4",
+    "less": "^2.7.2",
+    "live-reload": "^1.1.0",
+    "mocha": "^3.3.0",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0",
+    "typescript": "^2.3.2",
+    "uglify-js": "^3.0.7",
+    "watch": "^1.0.2",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "koa": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url":"."
+  }
+}
