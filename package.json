@@ -31,7 +31,13 @@
     "watch:bundleWatcher": "watch 'npm run build:bundle' client",
     "watch:browser": "live-reload --port 9091 public/",
     "watch": "npm run watch:test & npm run watch:bundle & npm run watch:server & npm run watch:browser",
-    "push:origin": "git push --tags origin HEAD:master"
+    "push:origin": "git push --tags origin HEAD:master",
+    "push:heroku":"git push heroku master"
+  },
+  "engines":{
+    "node":"~6.10.2",
+    "npm":"~3.10.10"
+
   },
   "jshintConfig": {
     "esnext": "true",
