@@ -31,13 +31,18 @@
     "watch:bundleWatcher": "watch 'npm run build:bundle' client",
     "watch:browser": "live-reload --port 9091 public/",
     "watch": "npm run watch:test & npm run watch:bundle & npm run watch:server & npm run watch:browser",
+    "version:major":"npm version major",
+    "version:minor":"npm version minor",
+    "version:patch":"npm version patch",
     "push:origin": "git push --tags origin HEAD:master",
     "push:heroku":"git push heroku master",
     "push:s3":"s3-cli sync ./dist s3://path-to-my-site",
     "push:azure":"git push azure master",
     "lunch:prod": "heroku open",
     "lunch:prod:nix": "open https://stupidlittlewebsite-course.herokuapp.com/",
-    "lunch:prod:wind": "start https://stupidlittlewebsite-course.herokuapp.com/"    
+    "lunch:prod:wind": "start https://stupidlittlewebsite-course.herokuapp.com/"  ,
+    "deploy:prod":"npm run test:deploy -s && npm run build -s && npm run version:patch",
+    "test:deploy":"npm t -- -R dot"
   },
   "engines":{
     "node":"~6.10.2",
