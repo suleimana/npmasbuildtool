@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "this is sample web site to learn npm ",
   "main": "index.js",
   "scripts": {
@@ -42,7 +42,7 @@
     "lunch:prod": "heroku open",
     "lunch:prod:nix": "open https://stupidlittlewebsite-course.herokuapp.com/",
     "lunch:prod:wind": "start https://stupidlittlewebsite-course.herokuapp.com/",
-    "predeploy:prod":"echo \" 1) Lint compile & test \n 2) Bundle and Minfy\n 3) Less to css\n 3) Bunp the version\n 4) push to remote\n 5) deply to Heroku\n\"",
+    "predeploy:prod": "echo \" 1) Lint compile & test \n 2) Bundle and Minfy\n 3) Less to css\n 3) Bunp the version\n 4) push to remote\n 5) deply to Heroku\n\"",
     "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch && npm run push && npm run lunch:prod",
     "test:deploy": "npm t -- -R dot"
   },
