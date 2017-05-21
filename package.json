@@ -34,7 +34,10 @@
     "push:origin": "git push --tags origin HEAD:master",
     "push:heroku":"git push heroku master",
     "push:s3":"s3-cli sync ./dist s3://path-to-my-site",
-    "push:azure":"git push azure master"    
+    "push:azure":"git push azure master",
+    "lunch:prod": "heroku open",
+    "lunch:prod:nix": "open https://stupidlittlewebsite-course.herokuapp.com/",
+    "lunch:prod:wind": "start https://stupidlittlewebsite-course.herokuapp.com/"    
   },
   "engines":{
     "node":"~6.10.2",
