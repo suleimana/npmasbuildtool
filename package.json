@@ -38,10 +38,11 @@
     "push:heroku": "git push heroku master",
     "push:s3": "s3-cli sync ./dist s3://path-to-my-site",
     "push:azure": "git push azure master",
+    "push":"npm run push:origin && push:heroku",
     "lunch:prod": "heroku open",
     "lunch:prod:nix": "open https://stupidlittlewebsite-course.herokuapp.com/",
     "lunch:prod:wind": "start https://stupidlittlewebsite-course.herokuapp.com/",
-    "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch",
+    "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch && npm run push && npm run unch:prod",
     "test:deploy": "npm t -- -R dot"
   },
   "engines": {
