@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "this is sample web site to learn npm ",
   "main": "index.js",
   "scripts": {
@@ -38,7 +38,7 @@
     "push:heroku": "git push heroku master",
     "push:s3": "s3-cli sync ./dist s3://path-to-my-site",
     "push:azure": "git push azure master",
-    "push":"npm run push:origin && push:heroku",
+    "push": "npm run push:origin && push:heroku",
     "lunch:prod": "heroku open",
     "lunch:prod:nix": "open https://stupidlittlewebsite-course.herokuapp.com/",
     "lunch:prod:wind": "start https://stupidlittlewebsite-course.herokuapp.com/",
