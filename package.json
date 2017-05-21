@@ -34,7 +34,7 @@
     "push:origin": "git push --tags origin HEAD:master",
     "push:heroku":"git push heroku master",
     "push:s3":"s3-cli sync ./dist s3://path-to-my-site",
-    "push:azure":"git push azure master"
+    "push:azure":"git push azure master"    
   },
   "engines":{
     "node":"~6.10.2",
