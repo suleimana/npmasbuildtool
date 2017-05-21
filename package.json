@@ -42,7 +42,7 @@
     "lunch:prod": "heroku open",
     "lunch:prod:nix": "open https://stupidlittlewebsite-course.herokuapp.com/",
     "lunch:prod:wind": "start https://stupidlittlewebsite-course.herokuapp.com/",
-    "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch && npm run push && npm run unch:prod",
+    "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch && npm run push && npm run lunch:prod",
     "test:deploy": "npm t -- -R dot"
   },
   "engines": {
