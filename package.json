@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "this is sample web site to learn npm ",
   "main": "index.js",
   "scripts": {
