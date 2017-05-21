@@ -32,7 +32,9 @@
     "watch:browser": "live-reload --port 9091 public/",
     "watch": "npm run watch:test & npm run watch:bundle & npm run watch:server & npm run watch:browser",
     "push:origin": "git push --tags origin HEAD:master",
-    "push:heroku":"git push heroku master"
+    "push:heroku":"git push heroku master",
+    "push:s3":"s3-cli sync ./dist s3://path-to-my-site",
+    "push:azure":"git push azure master"
   },
   "engines":{
     "node":"~6.10.2",
